@@ -125,6 +125,7 @@ def saludo(nombre):
 # funcion seguido de parentesis, si la funcion espera un argumento hay que poner
 # el valor del argumento dentro de los parentesis
 
+
 saludo("RAMONCITO")  # esto imprimiria en pantalla `Hola RAMONCITO`
 
 # Una funcion puede tener n numero de argumentos o no tener ninguno,
@@ -133,6 +134,7 @@ saludo("RAMONCITO")  # esto imprimiria en pantalla `Hola RAMONCITO`
 
 def saludo2(nombre, edad):
     print("Hola", nombre, "tenes", edad, "años")
+
 
 saludo2("Marcelo", 32)  # Esto imprimiria `Hola Marcelo tenes 32 años`
 saludo2(32, "Marcelo")  # Esto imprimiria `Hola Marcelo32 tenes Marcelo años`
@@ -147,12 +149,14 @@ def suma_numeros(num1, num2):
 # como en el siguiente ejemplo guardamos el valor de retorno(la suma de los
 # numeros en los argumentos al llamar a la funcion) en la variable pepito
 
+
 pepito = suma_numeros(3, 4)
 print(pepito)  # esto imprime el valor de pepito que es 7
 
 
 def division(dividendo, divisor):
     return dividendo / divisor
+
 
 division(20, 5)  # 20  divido 5
 division(5, 20)  # 5 divido 20
@@ -163,6 +167,7 @@ division(5, 20)  # 5 divido 20
 def al_cuadrado(numero):
     return numero * numero
 
+
 al_cuadrado(6)
 
 # Se puede asignar un valor por defecto a los argumentos
@@ -170,6 +175,7 @@ al_cuadrado(6)
 
 def saludo3(nombre, edad=0):
     print("Hola", nombre, "tenes", edad, "anhos")
+
 
 saludo3("Marce")
 saludo3("Marce", 32)
@@ -188,6 +194,7 @@ print(nombre, edad)
 
 def saludo5(nombre="", edad=""):
     print("Hola", nombre, "tenes", edad, "anhos")
+
 
 saludo5(edad=32, nombre="Marce")
 
@@ -219,17 +226,20 @@ suma_lista([1, 2, 30, 5, 1])
 # estos ejemplos deberian retornar 39 porque 1+2+30+5+1=39
 
 
-### TIPOS DE DATOS
+# TIPOS DE DATOS
 
 "Hola!"                          # esto es un string/cadena de caraceres(str)
 50                               # esto es un Integer/entero(int)
 50.0                             # esto es un Float(float)
-[ ]                              # esta es una lista vacia(list)
-def nombre_de_la_funcion():...   #esto es una funcion(function)
+[]                               # esta es una lista vacia(list)
+def nombre_de_la_funcion(): ...  # esto es una funcion(function)
+
 
 # Para saber el tipo de dato de una variable podemos usar la funcion type()
 # ejemplo
-a=345 # Creamos la variable a y le asignamos 345 como valor
-type(a) # deberia retornar int(integer)
-a="Hola" # Cambiamos el valor a un texto
-type(a) # deberia retornar str(string)
+
+
+a = 345  # Creamos la variable a y le asignamos 345 como valor
+type(a)  # deberia retornar int(integer)
+a = "Hola"  # Cambiamos el valor a un texto
+type(a)  # deberia retornar str(string)
