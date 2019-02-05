@@ -1,6 +1,7 @@
 # Toda linea que empiece con # es un comentario y la computadora va a ignorar
 
 # Creamos una variable nombre con el valor "Marce"
+# El operador `es igual` = es el operador de asignacion
 nombre = "Marce"
 # Imprimimos en pantlla el valor de la variable nombre
 print(nombre)
