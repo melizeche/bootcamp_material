@@ -51,7 +51,7 @@ lista_temas = ["variables", "tipos", "listas"]
 # En Python el bucle for recorre una lista o un rango,
 # en el siguiente ejemplo la variable `concepto` (que podria tener cualquier otro
 # nombre) por cada ciclo o repeticion va a ir tomando los valores de la
-# lista `lista temas`, en este ejemplo el bucle for va a tener 3 repeticiones 
+# lista `lista temas`, en este ejemplo el bucle for va a tener 3 repeticiones
 # porque es la cantidad de elementos que tiene `lista_temas`
 for concepto in lista_temas:
     print("Hoy aprendi", concepto)
@@ -68,10 +68,10 @@ print("Esto es lo que aprendi")
 # Por cada repeticion/iteracion del siguiente for la variable i toma el valor
 # de la secuencia retornada por range, en este caso del 1 al 10, y lo imprime
 for i in range(1, 11):
-   print(i)
+    print(i)
 
-#El ejemplo de arriba seria equivalente a esto:
-for i in [1,2,3,4,5,6,7,8,9,10]:
+# El ejemplo de arriba seria equivalente a esto:
+for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
     print(i)
 
 # La variable del for puede tener cualquier nombre e inclusive podemos no usarla
@@ -79,7 +79,7 @@ for i in [1,2,3,4,5,6,7,8,9,10]:
 for pepito in range(10):
     print("Hola Mundo!")
 
-# Crear una lista de 6 numeros, recorrerla con un for e imprimir la suma de 
+# Crear una lista de 6 numeros, recorrerla con un for e imprimir la suma de
 # los numeros de la lista
 lista_numeros = [1, 2, 3, 4, 5, 6]
 suma = 0
@@ -103,9 +103,9 @@ for factor in lista_numeros:
 print(multi)
 
 
-### FUNCIONES
-# Una función es un bloque de código con un nombre asociado, que recibe cero o más argumentos 
-# como entrada, sigue una secuencia de sentencias, la cuales ejecuta una 
+# FUNCIONES
+# Una función es un bloque de código con un nombre asociado, que recibe cero o más argumentos
+# como entrada, sigue una secuencia de sentencias, la cuales ejecuta una
 # operación deseada y devuelve un valor y/o realiza una tarea,
 # este bloque puede ser llamado cuando se necesite.
 
@@ -113,7 +113,7 @@ print(multi)
 
 # def NOMBRE_DE_LA_FUNCION(LISTA_DE_PARAMETROS):
 #     CODIGO( ej. asignacion de variables, operaciones, bucles, )
-#     RETURN VALOR_A_RETORNAR  
+#     RETURN VALOR_A_RETORNAR
 
 # La siguiente funcion tiene como nombre `saludo` y reciba un argumento `nombre`
 # e imprime en pantalla `Hola [valor de nombre]`
@@ -124,16 +124,17 @@ def saludo(nombre):
 # funcion seguido de parentesis, si la funcion espera un argumento hay que poner
 # el valor del argumento dentro de los parentesis
 
-saludo("RAMONCITO") # esto imprimiria en pantalla `Hola RAMONCITO`
+saludo("RAMONCITO")  # esto imprimiria en pantalla `Hola RAMONCITO`
 
-# Una funcion puede tener n numero de argumentos o no tener ninguno, 
+# Una funcion puede tener n numero de argumentos o no tener ninguno,
 # estos son posicionales, por eso es importante el orden
+
 
 def saludo2(nombre, edad):
     print("Hola", nombre, "tenes", edad, "años")
 
-saludo2("Marcelo", 32) #Esto imprimiria `Hola Marcelo tenes 32 años`
-saludo2(32, "Marcelo") #Esto imprimiria `Hola Marcelo32 tenes Marcelo años`
+saludo2("Marcelo", 32)  # Esto imprimiria `Hola Marcelo tenes 32 años`
+saludo2(32, "Marcelo")  # Esto imprimiria `Hola Marcelo32 tenes Marcelo años`
 
 
 # La siguiente funcion recibe 2 argumentos y retorna el valor de su suma
@@ -142,20 +143,21 @@ def suma_numeros(num1, num2):
     return suma
 
 # Utilizamos return para retornar el valor, de esta forma podemos utilizarlo
-# como en el siguiente ejemplo guardamos el valor de retorno(la suma de los 
+# como en el siguiente ejemplo guardamos el valor de retorno(la suma de los
 # numeros en los argumentos al llamar a la funcion) en la variable pepito
 
-pepito = suma_numeros(3, 4) 
-print(pepito) # esto imprime el valor de pepito que es 7
+pepito = suma_numeros(3, 4)
+print(pepito)  # esto imprime el valor de pepito que es 7
 
 
 def division(dividendo, divisor):
     return dividendo / divisor
 
-division(20, 5) # 20  divido 5
-division(5, 20) # 5 divido 20
+division(20, 5)  # 20  divido 5
+division(5, 20)  # 5 divido 20
 
 # Crear una funcion retorne un numero al cuadrado
+
 
 def al_cuadrado(numero):
     return numero * numero
@@ -163,6 +165,8 @@ def al_cuadrado(numero):
 al_cuadrado(6)
 
 # Se puede asignar un valor por defecto a los argumentos
+
+
 def saludo3(nombre, edad=0):
     print("Hola", nombre, "tenes", edad, "anhos")
 
@@ -198,7 +202,7 @@ saludo5(edad=32, nombre="Marce")
 lista_numeros = [1, 2, 3, 4, 5, 6]
 
 
-def suma_lista():
+def suma_lista(lista_de_numeros):
     # Esto es lo que hay que completar
     # mas codigo
     # es lo que esta adentro del for, lo que se va a repetir
@@ -208,5 +212,7 @@ def suma_lista():
 
 # Asi se le llama a la funcion
 lista_x = [1, 2, 30, 5, 1]
-suma_lista()
-# este ejemplo deberia retornar 39 porque 1+2+30+5+1=39
+suma_lista(lista_x)
+# Tambien se le puede pasar la lista directamente
+suma_lista([1, 2, 30, 5, 1])
+# estos ejemplos deberian retornar 39 porque 1+2+30+5+1=39
