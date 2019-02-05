@@ -217,3 +217,19 @@ suma_lista(lista_x)
 # Tambien se le puede pasar la lista directamente
 suma_lista([1, 2, 30, 5, 1])
 # estos ejemplos deberian retornar 39 porque 1+2+30+5+1=39
+
+
+### TIPOS DE DATOS
+
+"Hola!"                          # esto es un string/cadena de caraceres(str)
+50                               # esto es un Integer/entero(int)
+50.0                             # esto es un Float(float)
+[ ]                              # esta es una lista vacia(list)
+def nombre_de_la_funcion():...   #esto es una funcion(function)
+
+# Para saber el tipo de dato de una variable podemos usar la funcion type()
+# ejemplo
+a=345 # Creamos la variable a y le asignamos 345 como valor
+type(a) # deberia retornar int(integer)
+a="Hola" # Cambiamos el valor a un texto
+type(a) # deberia retornar str(string)
