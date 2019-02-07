@@ -46,3 +46,5 @@ pepita = Dino("Pepa", "plata")
 pepite = Dino("Pepx")
 pepiti = Dino("Pxpx", "Azulgrana")
 pepo = Dino(un_color="Pink", un_nombre="GGGG")
+
+
