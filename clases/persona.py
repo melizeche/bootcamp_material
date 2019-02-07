@@ -8,43 +8,79 @@
 # Agregar un metodo a la clase persona, que se llame cumpleanhos y que aumente la edad de la
 # persona en un anho y retorne la edad nueva
 
+# Agregarle un atributo de clase a la clase persona que almacene una lista de hobbies
+# Crear un metodo getter que retorne los hobbies de la persona
+# Crear un metodo que agregue hobbies a la lista
+
+
+
+
+
 class Persona:
-    def __init__(self, un_nombre,una_edad,una_profesion):
+
+    lista_hobbies=[]
+
+    def __init__(self, un_nombre,una_edad,una_profesion, hobbies=None):
         self.nombre=un_nombre
         self.edad = una_edad
         self.profesion = una_profesion
+        self.lista_hobbies = hobbies
     
+    def __repr__(self):
+        valor = "<Objeto Persona: " + self.nombre  + ">"
+        return valor
+    
+    def agregar_hobbies(self, something):
+
+        self.lista_hobbies.append(something)
+        return self.lista_hobbies
+        # if type(something)==str or type(something)==list:
+        #     self.lista_hobbies.append(something)
+        #     return self.lista_hobbies
+        # else:
+        #     return ("Debes ingresar una lista [] o una cadena de texto '' ")
+        #self.agregados = something
+    
+    def obtener_hobbies(self):
+        return self.lista_hobbies
+
     def cumpleanhos(self):
         self.edad = self.edad + 1
         return self.edad
 
-guillermo = Persona("Guillermo", 27, "Programador")
-print(guillermo.edad)
-guillermo.cumpleanhos()
-print(guillermo.nombre)
-print(guillermo.edad)
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
-guillermo.cumpleanhos()
+patata = Persona("Guillermo", 27, "Programador", ['comer'])
 
-marce = Persona("Marcelo",32,"Chofer")
-print(marce.edad)
-marce.cumpleanhos()
-print(marce.edad)
-print(guillermo.edad)
+print(patata.lista_hobbies)
+print(patata.obtener_hobbies())
+print(patata.agregar_hobbies("dormir"))
 
-edad_de_guille = guillermo.cumpleanhos()
-print(edad_de_guille)
-print(edad_de_guille)
-print(edad_de_guille)
-print(edad_de_guille)
-print(edad_de_guille)
-print(edad_de_guille)
+
+# Crear una clase que se llame Agenda que tenga metodos
+# para agregar objetos de tipo Persona a una lista(atributo de clase) 
+# y tambien poder eliminar personas de esa lista
+# crear 3 personas y agregarlas a un objeto Agenda
+
+class Agenda:
+    #contactos = []
+    def __init__(self):
+        self.contactos = []
+    
+    def agregar_persona(self, milanesa):
+        if type(milanesa)==Persona:
+            self.contactos.append(milanesa)
+        else:
+            print("Necesito una persona")
+    
+    def eliminar_persona(self, personita):
+        self.contactos.remove(personita)
+
+agendita = Agenda()
+
+pepito = Persona("Pepe", 27, "EEEEEE", ['comer'])
+pepita = Persona("Pepa", 27, "DDDD", ['comer'])
+pepite = Persona("Pepx", 27, "Programador", ['comer'])
+
+agendita.agregar_persona(pepito)
+agendita.agregar_persona(pepita)
+agendita.agregar_persona(pepite)
+
